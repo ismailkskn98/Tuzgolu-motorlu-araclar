@@ -1,7 +1,11 @@
+import { useThemeToggle } from './hooks/useThemeToggle';
+
 function App() {
+  const { themeToggle } = useThemeToggle('light');
+
   return (
     <>
-      <h1>Hello</h1>
+      <button onClick={themeToggle}>Light / Dark Theme</button>
     </>
   );
 }
