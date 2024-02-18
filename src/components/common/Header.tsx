@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import logo from '../../assets/images/logo.png';
+import ThemeBtn from '../buttons/ThemeBtn';
 
 type NavItems = {
   link: string;
@@ -15,21 +17,22 @@ const navItems: NavItems[] = [
 
 const Header: FC = () => {
   return (
-    <header>
-      <div className="wrapper flex justify-between items-center">
-        <span>LOGO</span>
+    <header className="bg-gray-800 text-gray-500">
+      <div className="wrapper flex justify-between items-center max-h-28 py-4">
+        <img src={logo} alt="tuzgolu motorlu araçlar logo" className="max-h-24" />
         <nav>
-          <ul className="flex items-center capitalize">
+          <ul className="flex items-center capitalize gap-5 tracking-wider">
             {navItems.map((item, i) => (
               <li key={i}>
-                <a href={item.link} />
-                {item.title}
+                <a className="block cursor-pointer" href={item.link}>
+                  {item.title}
+                </a>
               </li>
             ))}
           </ul>
         </nav>
         <div className="buttons">
-          <span>A</span>
+          <ThemeBtn />
           <span>B</span>
         </div>
       </div>

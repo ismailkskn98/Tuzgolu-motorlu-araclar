@@ -2,8 +2,8 @@
 
 React - Tuzgolu Moturlu Araçlar => https://www.tuzgolumotorluaraclar.com/
 
-## React - Typescript - React Router - TailwindCss - Redux Toolkit
+## React - Typescript - TailwindCss - Redux Toolkit - Motion
 
 npm install -D tailwindcss postcss autoprefixer
 
-npm install react-router-dom @reduxjs/toolkit react-redux
+npm install react-router-dom @reduxjs/toolkit react-redux framer-motion react-icons
