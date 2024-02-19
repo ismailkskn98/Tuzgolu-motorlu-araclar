@@ -21,8 +21,10 @@ const LandingSlogan: FC = () => {
           delaySpeed={2000}
         />
       </h1>
-      <p className="leading-7 tracking-wider font-medium text-lg">
-        <h2 className="text-4xl landing-title mb-2">YILDIZ’ların üzerinde yükselen değeriniz</h2>
+      <p className="leading-7 tracking-wide font-medium text-lg">
+        <h2 className="text-4xl landing-title mb-5 before:content-['-'] before:text-light-orange">
+          YILDIZ’ların üzerinde yükselen değeriniz
+        </h2>
         Gerek servisimizde, gerek yolda kalınan durumlarda her türlü bakım, onarım,
         <p>tamirat ve mekanik hizmetleri için güvenle arayabilirsiniz.</p>
       </p>

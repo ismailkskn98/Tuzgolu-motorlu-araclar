@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 const LandingAnimation: FC = () => {
-  return <div>LandingAnimation</div>;
+  return <></>;
 };
 
 export default LandingAnimation;
