@@ -19,8 +19,8 @@ export default {
         },
       },
       backgroundImage: {
-        'landing-dark-bg': "url('./src/assets/images/landingBackgroundDark.svg')",
-        'landing-light-bg': "url('./src/assets/images/landingBackground.svg')",
+        'landing-dark-bg': "url('./assets/images/landingBackgroundDark.svg')",
+        'landing-light-bg': "url('./assets/images/landingBackground.svg')",
       },
     },
   },
