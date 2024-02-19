@@ -17,7 +17,7 @@ const navItems: NavItems[] = [
 
 const Header: FC = () => {
   return (
-    <header>
+    <header className="w-full">
       <div className="wrapper flex justify-between items-center max-h-28 py-4 text-light-white dark:text-dark-white">
         <img src={logo} alt="tuzgolu motorlu araçlar logo" className="max-h-24" />
         <nav>

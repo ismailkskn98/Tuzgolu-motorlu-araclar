@@ -4,6 +4,10 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'landing-light-bg': 'url(/src/assets/images/landing/landingBackground.svg)',
+        'landing-dark-bg': 'url(/src/assets/images/landing/landingBackgroundDark.svg)',
+      },
       colors: {
         dark: {
           black: '#222831',
