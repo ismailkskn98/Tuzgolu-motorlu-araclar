@@ -17,23 +17,23 @@ const navItems: NavItems[] = [
 
 const Header: FC = () => {
   return (
-    <header className="bg-gray-800 text-gray-500">
-      <div className="wrapper flex justify-between items-center max-h-28 py-4">
+    <header>
+      <div className="wrapper flex justify-between items-center max-h-28 py-4 text-light-white dark:text-dark-white">
         <img src={logo} alt="tuzgolu motorlu araçlar logo" className="max-h-24" />
         <nav>
-          <ul className="flex items-center capitalize gap-5 tracking-wider">
+          <ul className="flex items-center capitalize gap-7 tracking-wider">
             {navItems.map((item, i) => (
               <li key={i}>
-                <a className="block cursor-pointer" href={item.link}>
+                <a className="block cursor-pointer hover:text-light-orange transition-colors" href={item.link}>
                   {item.title}
                 </a>
               </li>
             ))}
           </ul>
         </nav>
-        <div className="buttons">
-          <ThemeBtn />
+        <div className="buttons flex items-center gap-3">
           <span>B</span>
+          <ThemeBtn />
         </div>
       </div>
     </header>
