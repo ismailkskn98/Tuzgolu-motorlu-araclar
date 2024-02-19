@@ -1,6 +1,6 @@
 # React - Typescript -Vite
 
-React - Tuzgolu Moturlu Araçlar => https://www.tuzgolumotorluaraclar.com/
+React - Tuzgolu Moturlu Araçlar => https://tuzgolu-motorlu-araclar-o2ae.vercel.app/
 
 ## React - Typescript - TailwindCss - Redux Toolkit - Motion
 
