@@ -18,10 +18,6 @@ export default {
           orange: '#FD7014',
         },
       },
-      backgroundImage: {
-        'landing-dark-bg': "url('/assets/images/landingBackgroundDark.svg')",
-        'landing-light-bg': "url('/assets/images/landingBackground.svg')",
-      },
     },
   },
   plugins: [],

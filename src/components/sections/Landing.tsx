@@ -3,7 +3,10 @@ import Header from '../common/Header';
 
 const Landing: FC = () => {
   return (
-    <section id="landing" className="relative w-full min-h-[1000px] bg-landing-light-bg dark:bg-landing-dark-bg">
+    <section
+      id="landing"
+      className="relative w-full min-h-[1000px] bg-[url(../../assets/images/landingBackground.svg)] dark:bg-[url(../../assets/images/landingBackgroundDark.svg)]"
+    >
       <div className="absolute bottom-0 left-0 w-full rotate-180 overflow-hidden">
         <svg
           className="relative block h-40 w-full"
