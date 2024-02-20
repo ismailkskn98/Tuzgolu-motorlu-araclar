@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { themeChange } from '../redux/features/themeSlice';
 
 export const useThemeToggle = (defaultTheme: string) => {
   const [theme, setTheme] = useState<string>(localStorage.getItem('theme') ?? defaultTheme);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (localStorage.getItem('theme') === 'dark') {
       document.documentElement.classList.add('dark');
+      dispatch(themeChange('dark'));
     } else {
       document.documentElement.classList.remove('dark');
+      dispatch(themeChange('light'));
     }
   }, [theme]);
 

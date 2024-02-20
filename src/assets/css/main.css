@@ -9,6 +9,7 @@ body {
   font-weight: 400;
   font-style: normal;
   /* background-color: #eeeeee; */
+  min-height: 3000px;
 }
 
 .wrapper {
@@ -20,4 +21,17 @@ body {
   font-family: 'K2D', sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.landing-animasyon-img {
+  animation: topBottom 3s ease-in-out infinite alternate;
+}
+
+@keyframes topBottom {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

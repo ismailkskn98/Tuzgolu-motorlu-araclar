@@ -5,11 +5,11 @@ const title = ['Motorlu Araçlar', 'Yedek Parçalar'];
 
 const LandingSlogan: FC = () => {
   return (
-    <div className="text-content text-light-white flex flex-col items-start gap-5">
+    <div className="text-content text-light-white flex flex-col items-start gap-5 w-2/5">
       <h1 className="landing-title text-8xl">
         <span className="">Tuzgölü</span>
       </h1>
-      <h1 className="landing-title text-8xl text-light-orange">
+      <h1 className="landing-title text-7xl text-light-orange">
         <Typewriter
           words={title}
           loop={false}
