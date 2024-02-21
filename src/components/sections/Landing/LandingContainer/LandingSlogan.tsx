@@ -5,11 +5,11 @@ const title = ['Motorlu Araçlar', 'Yedek Parçalar'];
 
 const LandingSlogan: FC = () => {
   return (
-    <div className="text-content text-light-white flex flex-col items-start gap-5 w-2/5">
+    <div className="text-content text-light-white flex flex-col items-start gap-5 w-[55%]">
       <h1 className="landing-title text-8xl">
-        <span className="">Tuzgölü</span>
+        <span>Tuzgölü</span>
       </h1>
-      <h1 className="landing-title text-7xl text-light-orange">
+      <h1 className="landing-title text-8xl text-light-orange">
         <Typewriter
           words={title}
           loop={false}
@@ -21,12 +21,14 @@ const LandingSlogan: FC = () => {
           delaySpeed={2000}
         />
       </h1>
+      <h2 className="text-4xl landing-title mb-5 before:content-['-'] before:text-light-orange">
+        YILDIZ’ların üzerinde yükselen değeriniz
+      </h2>
       <p className="leading-7 tracking-wide font-medium text-lg">
-        <h2 className="text-4xl landing-title mb-5 before:content-['-'] before:text-light-orange">
-          YILDIZ’ların üzerinde yükselen değeriniz
-        </h2>
         Gerek servisimizde, gerek yolda kalınan durumlarda her türlü bakım, onarım,
-        <p>tamirat ve mekanik hizmetleri için güvenle arayabilirsiniz.</p>
+      </p>
+      <p className='className="leading-7 tracking-wide font-medium text-lg"'>
+        tamirat ve mekanik hizmetleri için güvenle arayabilirsiniz.
       </p>
     </div>
   );

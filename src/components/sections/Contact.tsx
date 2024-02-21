@@ -1,7 +1,11 @@
 import { FC } from 'react';
 
 const Contact: FC = () => {
-  return <div>Contact</div>;
+  return (
+    <section id="iletisim" className="h-[1200px]">
+      Contact
+    </section>
+  );
 };
 
 export default Contact;

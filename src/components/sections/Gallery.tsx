@@ -1,7 +1,11 @@
 import { FC } from 'react';
 
 const Gallery: FC = () => {
-  return <div>Gallery</div>;
+  return (
+    <section id="galeri" className="h-[500px]">
+      Gallery
+    </section>
+  );
 };
 
 export default Gallery;

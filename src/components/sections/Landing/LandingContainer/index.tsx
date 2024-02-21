@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import LandingSlogan from './LandingSlogan';
-import LandingAnimation from './LandingAnimation';
+import LandingAnimation from './Animation';
 
 const LandingContainer: FC = () => {
   return (
-    <section className="wrapper w-full flex justify-between items-center flex-wrap min-h-[600px]">
+    <div className="wrapper w-full flex justify-between items-center flex-wrap min-h-[600px]">
       <LandingSlogan />
       <LandingAnimation />
-    </section>
+    </div>
   );
 };
 
