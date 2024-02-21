@@ -9,16 +9,11 @@ Source: https://sketchfab.com/3d-models/mercedes-benz-wheel-amg-monoblock-aero-2
 Title: Mercedes-Benz Wheel AMG Monoblock Aero 2
 */
 import { useGLTF } from '@react-three/drei';
-import { MeshProps } from '@react-three/fiber';
 
-type ModelProps = {
-  // props types
-} & MeshProps;
-
-export function Model(props: ModelProps) {
+export function Model() {
   const { nodes, materials } = useGLTF('/mercedes-transformed.glb');
   return (
-    <group {...props} dispose={null}>
+    <group dispose={null} scale={8}>
       <mesh
         geometry={(nodes.Car_tire_2_Material002_0 as any).geometry}
         material={materials['Material.002']}

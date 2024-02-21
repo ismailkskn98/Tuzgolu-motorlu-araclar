@@ -15,7 +15,7 @@ const LandingFrontAnimation: FC = () => {
         <ambientLight intensity={0.9} />
         {/* <directionalLight position={[3, 2, 1]} /> */}
         <spotLight intensity={15} position={[1, -1, 1]} />
-        <Model scale={8} />
+        <Model />
       </Canvas>
     </div>
   );
