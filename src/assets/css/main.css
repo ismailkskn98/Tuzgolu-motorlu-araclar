@@ -25,16 +25,3 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-
-.landing-animasyon-img {
-  animation: topBottom 3s ease-in-out infinite alternate;
-}
-
-@keyframes topBottom {
-  0% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}

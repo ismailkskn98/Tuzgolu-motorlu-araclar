@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Model } from './Mercedes';
-import { RootState } from '../../../../../redux/app/store';
+import { RootState } from '@/redux/app/store';
 import { useSelector } from 'react-redux';
 
 const LandingFrontAnimation: FC = () => {

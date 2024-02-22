@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import logo from '../../assets/images/logo.png';
-import ThemeBtn from '../buttons/ThemeBtn';
+import logo from '@/assets/images/logo.png';
+import ThemeBtn from '@/components/buttons/ThemeBtn';
 import Navbar from './Navbar';
 
 export type NavItems = {

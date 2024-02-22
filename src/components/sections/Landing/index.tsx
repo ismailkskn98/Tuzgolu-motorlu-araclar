@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Header from '../../common/Header';
+import Header from '@/components/common/Header';
 import LandingShape from './LandingShape';
 import LandingContainer from './LandingContainer';
 

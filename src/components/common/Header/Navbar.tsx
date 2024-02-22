@@ -1,6 +1,6 @@
 /* eslint-disable no-debugger */
 import { FC, useEffect, useState } from 'react';
-import { NavItems } from './Header';
+import { NavItems } from '.';
 
 type NavbarProps = {
   navItems: NavItems[];
