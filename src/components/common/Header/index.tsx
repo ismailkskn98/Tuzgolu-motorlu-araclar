@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import logo from '@/assets/images/logo.png';
-import ThemeBtn from '@/components/buttons/ThemeBtn';
+import logo from '../../../assets/images/logo.png';
+import ThemeBtn from '../../../components/buttons/ThemeBtn';
 import Navbar from './Navbar';
 import MobilNavbar from './MobilNavbar';
 

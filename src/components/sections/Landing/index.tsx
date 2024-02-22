@@ -1,21 +1,23 @@
 import { FC } from 'react';
-import Header from '@/components/common/Header';
+import Header from '../../common/Header';
 import LandingShape from './LandingShape';
 import LandingContainer from './LandingContainer';
+import { motion } from 'framer-motion';
 
 const Landing: FC = () => {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       id="anasayfa"
-      className="relative w-full min-h-screen lg:min-h-[1000px] flex flex-col items-center gap-8 lg:gap-24 bg-landing-light-bg dark:bg-landing-dark-bg bg-cover lg:bg-fixed bg-repeat bg-center overflow-hidden"
+      className="relative w-full h-auto pb-5 lg:mb-0 lg:min-h-[1000px] flex flex-col items-center gap-8 lg:gap-24 bg-landing-light-bg dark:bg-landing-dark-bg bg-cover lg:bg-fixed bg-repeat bg-center overflow-hidden"
     >
       <div className="absolute bottom-0 left-0 w-full rotate-180 overflow-hidden">
-        <div className="bg-[url(@/assets/images/landing/)]"></div>
         <LandingShape />
       </div>
       <Header />
       <LandingContainer />
-    </section>
+    </motion.section>
   );
 };
 

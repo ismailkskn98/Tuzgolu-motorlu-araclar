@@ -1,11 +1,16 @@
 import { FC } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
+import { motion } from 'framer-motion';
 
 const title = ['Motorlu Araçlar', 'Yedek Parçalar'];
 
 const LandingSlogan: FC = () => {
   return (
-    <div className="relative z-10 text-light-white flex flex-col items-center lg:items-start gap-5 w-full lg:w-[55%] text-center lg:text-left">
+    <motion.div
+      initial={{ translateY: '100px' }}
+      animate={{ translateY: 0 }}
+      className="relative z-10 backdrop-blur-sm lg:backdrop-blur-0 text-light-white flex flex-col items-center lg:items-start gap-5 w-full lg:w-[55%] mb-4 lg:mb-0 text-center lg:text-left"
+    >
       <h1 className="landing-title text-7xl lg:text-8xl lg:text-left">Tuzgölü</h1>
       <h1 className="landing-title text-[40px] lg:text-6xl xl:text-8xl lg:text-left text-light-orange">
         <Typewriter
@@ -28,7 +33,7 @@ const LandingSlogan: FC = () => {
       <p className='className="leading-7 tracking-wide font-medium text-lg"'>
         tamirat ve mekanik hizmetleri için güvenle arayabilirsiniz.
       </p>
-    </div>
+    </motion.div>
   );
 };
 

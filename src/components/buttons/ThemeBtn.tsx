@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import { useThemeToggle } from '@/hooks/useThemeToggle';
+import { useThemeToggle } from '../../hooks/useThemeToggle';
 import { CiLight, CiDark } from 'react-icons/ci';
 
 const ThemeBtn: FC = () => {
