@@ -8,8 +8,8 @@ const LandingAnimation: FC = () => {
   const { themes } = useSelector((state: RootState) => state.theme);
 
   return (
-    <div className="relative min-h-[600px] flex justify-center items-center flex-grow">
-      <Canvas style={{ position: 'absolute', top: 0, right: 0, zIndex: 0 }}>
+    <div className="">
+      <Canvas>
         <OrbitControls enableZoom={false} />
         <directionalLight position={[3, 2, 1]} />
         <Sphere args={[1.1, 100, 200]} scale={2.5}>

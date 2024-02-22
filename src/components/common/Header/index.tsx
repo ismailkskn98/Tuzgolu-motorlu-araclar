@@ -2,6 +2,7 @@ import { FC } from 'react';
 import logo from '@/assets/images/logo.png';
 import ThemeBtn from '@/components/buttons/ThemeBtn';
 import Navbar from './Navbar';
+import MobilNavbar from './MobilNavbar';
 
 export type NavItems = {
   id: string;
@@ -19,11 +20,12 @@ const navItems: NavItems[] = [
 
 const Header: FC = () => {
   return (
-    <header className="w-full">
-      <div className="wrapper flex justify-between items-center max-h-28 py-4 text-light-white dark:text-dark-white">
-        <img src={logo} alt="tuzgolu motorlu araçlar logo" className="max-h-24" />
+    <header className="w-full py-3">
+      <div className="wrapper flex justify-between items-center max-h-28 text-light-white dark:text-dark-white">
+        <img src={logo} alt="tuzgolu motorlu araçlar logo" className="max-h-20 lg:max-h-24" />
         <Navbar navItems={navItems} />
-        <div className="buttons flex items-center gap-3">
+        <MobilNavbar navItems={navItems} />
+        <div className="buttons items-center gap-3 hidden lg:flex">
           <span>B</span>
           <ThemeBtn />
         </div>

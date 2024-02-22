@@ -24,4 +24,11 @@ body {
   font-family: 'K2D', sans-serif;
   font-weight: 700;
   font-style: normal;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    padding: 0 1.5rem;
+  }
 }

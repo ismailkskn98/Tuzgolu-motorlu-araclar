@@ -37,7 +37,7 @@ const Navbar: FC<NavbarProps> = ({ navItems }) => {
   console.log(activeSection);
 
   return (
-    <nav>
+    <nav className="hidden lg:block">
       <ul className="flex items-center capitalize gap-7 tracking-wider">
         {navItems.map((item, i) => (
           <li key={i}>
