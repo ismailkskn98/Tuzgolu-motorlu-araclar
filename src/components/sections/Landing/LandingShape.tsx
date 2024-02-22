@@ -3,7 +3,7 @@ import { FC } from 'react';
 const LandingShape: FC = () => {
   return (
     <svg
-      className="relative h-6 md:h-8 xl:h-32 w-full block"
+      className="relative block h-8 md:h-12 lg:h-16 xl:h-32 w-full"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1200 120"

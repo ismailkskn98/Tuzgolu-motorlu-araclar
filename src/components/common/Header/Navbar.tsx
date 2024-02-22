@@ -34,7 +34,6 @@ const Navbar: FC<NavbarProps> = ({ navItems }) => {
     const targetSection = document.getElementById(sectionId);
     targetSection?.scrollIntoView({ behavior: 'smooth' });
   };
-  console.log(activeSection);
 
   return (
     <nav className="hidden lg:block">
