@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { NavItems } from '.';
+import { NavItems } from '..';
 
 type MobilNavbarProps = {
   navItems: NavItems[];
