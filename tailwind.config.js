@@ -10,9 +10,9 @@ export default {
       },
       colors: {
         dark: {
-          black: '#222831',
+          black: '#1b1e25',
           // gray: '#393E46',
-          gray: '#1c2129',
+          gray: '#222831',
           orange: '#FD7014',
           white: '#EEEEEE',
         },

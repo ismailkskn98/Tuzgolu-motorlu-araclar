@@ -5,44 +5,90 @@ import logo from '../../../../assets/images/logo.png';
 import { IoClose } from 'react-icons/io5';
 import ThemeBtn from '../../../buttons/ThemeBtn';
 import { SlMenu } from 'react-icons/sl';
+import { useActiveNav } from '../../../../hooks/useActiveNav';
 
 type MobilNavbarProps = {
   navItems: NavItems[];
 };
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
   const [isShow, setIsShow] = useState(false);
-  const handleNavClick = () => {
+  const { activeSection, handleNavLinkClick } = useActiveNav();
+
+  const handleNavClick = (sectionId: string): void => {
     setIsShow((prev) => !prev);
+    handleNavLinkClick(sectionId);
   };
 
   return (
     <nav id="mobilNav" className="lg:hidden">
-      <SlMenu onClick={handleNavClick} className="text-4xl" />
+      <SlMenu onClick={() => setIsShow((prev) => !prev)} className="text-4xl" />
       <AnimatePresence>
         {isShow && (
           <motion.div
             initial={{ translateX: '600px' }}
             animate={{ translateX: '0px' }}
             exit={{ translateX: '600px' }}
+            transition={{ type: 'spring', stiffness: 600, damping: 50 }}
             className="h-full w-full fixed top-0 left-0 z-50 px-6 pb-10 flex flex-col items-center gap-14 bg-light-white text-black dark:text-dark-white dark:bg-dark-black"
           >
-            <header className="w-full flex items-center justify-between py-3">
+            <motion.header
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.9 }}
+              className="w-full flex items-center justify-between py-3"
+            >
               <img src={logo} alt="tuzgolu yedek parcalar" className="max-h-20" />
-              <IoClose className="text-black text-[40px] dark:text-dark-white" onClick={handleNavClick} />
-            </header>
-            <ul className="flex flex-col items-center gap-10 flex-grow text-2xl">
-              {navItems.map((item, i) => (
-                <li key={i}>
-                  <a href={item.link} onClick={handleNavClick} className="block capitalize text-center">
-                    {item.title}
+              <IoClose className="text-black text-[40px] dark:text-dark-white" onClick={() => setIsShow((prev) => !prev)} />
+            </motion.header>
+            <motion.ul
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-col items-center gap-10 flex-grow text-2xl"
+            >
+              {navItems.map((navItem, i) => (
+                <motion.li variants={item} key={i}>
+                  <a
+                    href={navItem.link}
+                    onClick={() => handleNavClick(navItem.id)}
+                    className={`block capitalize text-center cursor-pointer hover:text-light-orange transition-colors ${
+                      activeSection === navItem.id ? 'text-light-orange' : ''
+                    }`}
+                  >
+                    {navItem.title}
                   </a>
-                </li>
+                </motion.li>
               ))}
-            </ul>
-            <footer className="w-full flex justify-between">
+            </motion.ul>
+            <motion.footer
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.9 }}
+              className="w-full flex justify-between"
+            >
               <ThemeBtn /> A
-            </footer>
+            </motion.footer>
           </motion.div>
         )}
       </AnimatePresence>
