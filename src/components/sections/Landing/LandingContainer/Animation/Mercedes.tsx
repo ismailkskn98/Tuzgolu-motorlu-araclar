@@ -13,7 +13,7 @@ import { useGLTF } from '@react-three/drei';
 export function Model() {
   const { nodes, materials } = useGLTF('/mercedes-transformed.glb');
   return (
-    <group dispose={null} scale={8}>
+    <group dispose={null} scale={8} rotation={[0, -2, 0]}>
       <mesh
         geometry={(nodes.Car_tire_2_Material002_0 as any).geometry}
         material={materials['Material.002']}

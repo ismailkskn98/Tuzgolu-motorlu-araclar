@@ -11,7 +11,8 @@ export default {
       colors: {
         dark: {
           black: '#222831',
-          gray: '#393E46',
+          // gray: '#393E46',
+          gray: '#1c2129',
           orange: '#FD7014',
           white: '#EEEEEE',
         },

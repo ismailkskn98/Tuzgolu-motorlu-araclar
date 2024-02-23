@@ -11,9 +11,9 @@ const Landing: FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       id="anasayfa"
-      className="relative w-full h-auto pb-5 lg:mb-0 lg:min-h-[1000px] flex flex-col items-center gap-8 lg:gap-24 bg-landing-light-bg dark:bg-landing-dark-bg bg-cover lg:bg-fixed bg-repeat bg-center overflow-hidden"
+      className="relative w-full h-auto pb-24 lg:pb-0 lg:min-h-[900px] flex flex-col items-center gap-8 lg:gap-10 bg-landing-light-bg dark:bg-landing-dark-bg bg-cover lg:bg-fixed bg-repeat bg-center overflow-hidden"
     >
-      <div className="absolute bottom-0 left-0 w-full rotate-180 overflow-hidden">
+      <div className="absolute -bottom-[.2px] left-0 w-full rotate-180 overflow-hidden">
         <LandingShape />
       </div>
       <Header />
