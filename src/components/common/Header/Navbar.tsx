@@ -2,6 +2,7 @@
 import { FC } from 'react';
 import { NavItems } from '.';
 import { useActiveNav } from '../../../hooks/useActiveNav';
+import { useIsScroll } from '../../../hooks/useIsScroll';
 
 type NavbarProps = {
   navItems: NavItems[];
@@ -9,6 +10,7 @@ type NavbarProps = {
 
 const Navbar: FC<NavbarProps> = ({ navItems }) => {
   const { activeSection, handleNavLinkClick } = useActiveNav();
+  const isScroll = useIsScroll();
 
   return (
     <nav className="hidden lg:block">
@@ -16,9 +18,9 @@ const Navbar: FC<NavbarProps> = ({ navItems }) => {
         {navItems.map((item, i) => (
           <li key={i}>
             <a
-              className={`block cursor-pointer hover:text-light-orange transition-colors ${
-                activeSection === item.id ? 'text-light-orange' : ''
-              }`}
+              className={`block cursor-pointer hover:text-light-orange transition-colors text-[15px]  ${
+                activeSection === item.id && 'text-light-orange'
+              } ${isScroll && 'text-sm'}`}
               onClick={() => handleNavLinkClick(item.id)}
               href={item.link}
             >

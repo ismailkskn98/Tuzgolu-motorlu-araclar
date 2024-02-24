@@ -50,7 +50,7 @@ const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
             animate={{ translateX: '0px' }}
             exit={{ translateX: '600px' }}
             transition={{ type: 'spring', stiffness: 600, damping: 50 }}
-            className="h-full w-full fixed top-0 left-0 z-50 px-6 pb-10 flex flex-col items-center gap-14 bg-light-white text-black dark:text-dark-white dark:bg-dark-black"
+            className="h-full w-full fixed top-0 left-0 z-50 px-6 pb-10 flex flex-col items-center gap-14  bg-light-white text-black dark:text-dark-white dark:bg-dark-black"
           >
             <motion.header
               initial={{ opacity: 0 }}

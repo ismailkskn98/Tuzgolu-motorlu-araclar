@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 
-export const useActiveNav = () => {
+type ActiveNav = {
+  handleNavLinkClick: (sectionId: string) => void;
+  activeSection: string;
+};
+
+export const useActiveNav = (): ActiveNav => {
   const [activeSection, setActiveSection] = useState<string>('anasayfa');
 
   useEffect(() => {
@@ -23,7 +28,7 @@ export const useActiveNav = () => {
     };
   }, []);
 
-  const handleNavLinkClick = (sectionId: string) => {
+  const handleNavLinkClick = (sectionId: string): void => {
     setActiveSection(sectionId);
     const targetSection = document.getElementById(sectionId);
     targetSection?.scrollIntoView({ behavior: 'smooth' });

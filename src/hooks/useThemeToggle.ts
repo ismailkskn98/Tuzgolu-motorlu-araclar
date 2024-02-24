@@ -2,7 +2,12 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { themeChange } from '../redux/features/themeSlice';
 
-export const useThemeToggle = (defaultTheme: string) => {
+type ThemeToggle = {
+  theme: string;
+  themeToggle: () => void;
+};
+
+export const useThemeToggle = (defaultTheme: string): ThemeToggle => {
   const [theme, setTheme] = useState<string>(localStorage.getItem('theme') ?? defaultTheme);
   const dispatch = useDispatch();
 
