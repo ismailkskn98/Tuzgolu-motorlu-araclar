@@ -15,6 +15,10 @@ body {
   /* background-color: #eeeeee; */
 }
 
+section {
+  scroll-margin-top: 94px;
+}
+
 .wrapper {
   max-width: 90rem;
   margin: 0 auto;

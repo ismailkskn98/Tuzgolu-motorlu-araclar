@@ -14,7 +14,7 @@ export const useActiveNav = (): ActiveNav => {
       let currentActiveSection = '';
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.clientHeight;
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
           currentActiveSection = section.id;
