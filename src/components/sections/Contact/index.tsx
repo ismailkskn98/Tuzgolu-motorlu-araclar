@@ -1,77 +1,17 @@
 import { FC } from 'react';
-import { Formik, Form } from 'formik';
-import { contactSchema } from './Schema.ts';
-import CustomInput from './CustomInput.tsx';
-
-type InitialValues = {
-  firstName: string;
-  lastName: string;
-  phone: string;
-  email: string;
-  message: string;
-};
-
-type formItem = {
-  id: string;
-  name: string;
-  label: string;
-  type: string;
-};
-
-const initialValues: InitialValues = {
-  firstName: '',
-  lastName: '',
-  phone: '',
-  email: '',
-  message: '',
-};
-
-const formItems: formItem[] = [
-  {
-    id: 'firstName',
-    name: 'firstName',
-    label: 'Adınız',
-    type: 'text',
-  },
-  {
-    id: 'lastName',
-    name: 'lastName',
-    label: 'Soyadınız',
-    type: 'text',
-  },
-  {
-    id: 'phone',
-    name: 'phone',
-    label: 'Telefon Numarası',
-    type: 'text',
-  },
-  {
-    id: 'email',
-    name: 'email',
-    label: 'Email Adresi',
-    type: 'text',
-  },
-  {
-    id: 'message',
-    name: 'message',
-    label: 'Mesajınız',
-    type: 'text',
-  },
-];
-
+import ContactForm from './ContactForm';
+import ContactInfo from './ContactInfo';
 const Contact: FC = () => {
-  const onSubmit = () => {};
   return (
     <section id="iletisim" className="h-[1200px]">
-      <Formik initialValues={initialValues} validationSchema={contactSchema} onSubmit={onSubmit}>
-        {() => (
-          <Form>
-            {formItems.map((item, i) => (
-              <CustomInput key={i} {...item} />
-            ))}
-          </Form>
-        )}
-      </Formik>
+      <div className="wrapper mx-auto mb-3">
+        <h1 className="pb-3 text-5xl w-full text-center">İletişim</h1>
+        <p className="text-gray-600 italic text-center">Bize buradan ulaşarak sorularınızı sorabilirsiniz</p>
+      </div>
+      <main className="wrapper mx-auto flex items-start justify-between">
+        <ContactForm />
+        <ContactInfo />
+      </main>
     </section>
   );
 };
