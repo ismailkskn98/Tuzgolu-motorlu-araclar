@@ -7,6 +7,7 @@ export default {
       backgroundImage: {
         'landing-light-bg': 'url(/src/assets/images/landing/landingBackground.svg)',
         'landing-dark-bg': 'url(/src/assets/images/landing/landingBackgroundDark.svg)',
+        'contact-bg': 'url(/src/assets/images/contact/contact.svg)',
       },
       colors: {
         dark: {

@@ -57,14 +57,17 @@ const formItems: formItem[] = [
 const ContactForm: FC = () => {
   const onSubmit = () => {};
   return (
-    <div className="flex-grow bg-white p-10 rounded flex items-center justify-center">
+    <div className="w-full lg:w-[60%] bg-transparent p-10 rounded-l flex items-center justify-center">
       <Formik initialValues={initialValues} validationSchema={contactSchema} onSubmit={onSubmit}>
         {() => (
-          <Form className="w-full grid grid-cols-2 gap-5">
+          <Form className="w-full grid grid-cols-[repeat(1, 1fr)] lg:grid-cols-[repeat(2, minmax(300, 1fr))] gap-6">
             {formItems.map((item, i) => (
               <CustomInput key={i} {...item} />
             ))}
             <CustomTextarea id="message" name="message" label="Mesajınız" />
+            <button className="justify-self-end col-span-1 col-end-3 w-32 py-[9px] rounded bg-light-teal text-white dark:bg-dark-gray">
+              Gönder
+            </button>
           </Form>
         )}
       </Formik>

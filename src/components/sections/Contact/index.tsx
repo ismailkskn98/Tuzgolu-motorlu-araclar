@@ -4,13 +4,16 @@ import ContactInfo from './ContactInfo';
 const Contact: FC = () => {
   return (
     <section id="iletisim" className="h-[1200px]">
-      <div className="wrapper mx-auto mb-3">
-        <h1 className="pb-3 text-5xl w-full text-center">İletişim</h1>
-        <p className="text-gray-600 italic text-center">Bize buradan ulaşarak sorularınızı sorabilirsiniz</p>
+      <div className="wrapper mx-auto mb-10">
+        <h1 className="pb-4 font-bold text-5xl w-full text-center text-dark-gray dark:text-dark-white">İletişim</h1>
+        <p className="text-light-teal/60 dark:text-gray-400 italic text-center">
+          Herhangi bir sorunuz veya yorumunuz var mı? Bize bir mesaj yazmanız yeterli!
+        </p>
       </div>
-      <main className="wrapper mx-auto flex items-start justify-between">
-        <ContactForm />
+      <main className="relative wrapper bg-white dark:bg-dark-black p-4 mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between mt-10 overflow-hidden rounded">
         <ContactInfo />
+        <ContactForm />
+        <div className="absolute -bottom-2 right-16 bg-contact-bg w-64 h-36 -rotate-[30deg]"></div>
       </main>
     </section>
   );
