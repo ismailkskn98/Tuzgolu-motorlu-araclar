@@ -10,7 +10,7 @@ const Landing: FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       id="anasayfa"
-      className="relative w-full h-auto pb-24 lg:pb-0 lg:min-h-[920px] flex items-center bg-landing-light-bg dark:bg-landing-dark-bg bg-cover lg:bg-fixed bg-repeat bg-center overflow-hidden"
+      className="relative w-full h-auto pb-24 pt-32 lg:py-0 lg:min-h-[920px] flex items-center bg-landing-light-bg dark:bg-landing-dark-bg bg-cover lg:bg-fixed bg-repeat bg-center overflow-hidden"
     >
       <div className="absolute -bottom-[.5px] left-0 w-full overflow-hidden">
         <LandingShape />
