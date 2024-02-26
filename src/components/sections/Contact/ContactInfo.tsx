@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { FiInstagram } from 'react-icons/fi';
 import { BsWhatsapp } from 'react-icons/bs';
+import './contact.css';
 
 const ContactInfo: FC = () => {
   return (
@@ -29,16 +30,22 @@ const ContactInfo: FC = () => {
       <article className="flex items-center gap-5">
         <a
           href="https://www.instagram.com/tuzgolumotorluaraclar06/"
-          className="flex items-center justify-center w-9 h-9 rounded-full bg-light-light"
+          className="relative flex items-center justify-center w-9 h-9 rounded-full bg-light-light group"
         >
           <FiInstagram className="text-lg text-[#E1306C]" />
+          <span className="tooltip transition-all invisible bg-light-light text-light-teal dark:bg-dark-black dark:text-dark-white dark:after:border-b-dark-black group-hover:visible group-hover:-top-10 group-hover:opacity-100">
+            Instagram
+          </span>
         </a>
         <a
           href="https://wa.me/05388490063"
           target="_blank"
-          className="flex items-center justify-center w-9 h-9 rounded-full bg-light-light"
+          className="relative flex items-center justify-center w-9 h-9 rounded-full bg-light-light group"
         >
           <BsWhatsapp className="text-[#25D366] text-lg" />
+          <span className="tooltip transition-all invisible bg-light-light text-light-teal dark:bg-dark-black dark:text-dark-white dark:after:border-b-dark-black group-hover:visible group-hover:-top-10 group-hover:opacity-100">
+            Whatsapp
+          </span>
         </a>
       </article>
     </main>

@@ -42,12 +42,12 @@ const CustomInput: FC<CustomInputProps> = (props) => {
           className="px-3 py-4 rounded w-full outline-none border bg-transparent text-dark-gray dark:text-gray-300 text-xs dark:border-gray-600"
         />
         <label
-          className="absolute top-1/2 px-1 -translate-y-1/2 left-3 text-sm tracking-wide transition-all bg-white dark:bg-dark-black text-dark-gray dark:text-gray-300"
+          className="absolute top-1/2 px-1 -translate-y-1/2 left-3 text-[13px] tracking-wide transition-all bg-white dark:bg-dark-black text-dark-gray dark:text-gray-300"
           htmlFor={props.id}
         >
           {props.label}
         </label>
-        <span className="absolute top-1/2 -translate-y-1/2 right-3 text-lg tracking-wide text-dark-gray dark:text-gray-300">
+        <span className="absolute top-1/2 -translate-y-1/2 right-3 text-[16px] tracking-wide text-dark-gray dark:text-gray-300">
           {formIcon()}
         </span>
       </article>
