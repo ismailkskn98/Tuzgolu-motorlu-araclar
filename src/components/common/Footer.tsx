@@ -1,6 +1,6 @@
 import { FC } from 'react';
 const Footer: FC = () => {
-  return <div>Footer</div>;
+  return <div className="min-h-52">Footer</div>;
 };
 
 export default Footer;

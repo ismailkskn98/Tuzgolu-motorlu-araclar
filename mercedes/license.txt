@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mercedes-Benz Wheel AMG Monoblock Aero 2
+* source:	https://sketchfab.com/3d-models/mercedes-benz-wheel-amg-monoblock-aero-2-cfdf7e25c5a94f36a213ab524abcb1e7
+* author:	Jupiter (https://sketchfab.com/jupiterus)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mercedes-Benz Wheel AMG Monoblock Aero 2" (https://sketchfab.com/3d-models/mercedes-benz-wheel-amg-monoblock-aero-2-cfdf7e25c5a94f36a213ab524abcb1e7) by Jupiter (https://sketchfab.com/jupiterus) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

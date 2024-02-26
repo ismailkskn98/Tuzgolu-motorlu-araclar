@@ -5,6 +5,7 @@ import About from './components/sections/About';
 import Gallery from './components/sections/Gallery';
 import Contact from './components/sections/Contact';
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
 const App: FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: FC = () => {
       <About />
       <Gallery />
       <Contact />
+      <Footer />
     </>
   );
 };

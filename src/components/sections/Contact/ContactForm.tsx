@@ -57,21 +57,21 @@ const formItems: formItem[] = [
 const ContactForm: FC = () => {
   const onSubmit = () => {};
   return (
-    <div className="w-full lg:w-[60%] bg-transparent p-10 rounded-l flex items-center justify-center">
+    <main className="w-full lg:w-[60%] bg-transparent p-10 rounded-l flex items-center justify-center">
       <Formik initialValues={initialValues} validationSchema={contactSchema} onSubmit={onSubmit}>
         {() => (
-          <Form className="w-full grid grid-cols-[repeat(1, 1fr)] lg:grid-cols-[repeat(2, minmax(300, 1fr))] gap-6">
+          <Form className="w-full grid grid-cols-[repeat(1, 1fr)] lg:grid-cols-[repeat(2, minmax(300, 1fr))] gap-6 gap-y-10">
             {formItems.map((item, i) => (
               <CustomInput key={i} {...item} />
             ))}
             <CustomTextarea id="message" name="message" label="Mesajınız" />
-            <button className="justify-self-end col-span-1 col-end-3 w-32 py-[9px] rounded bg-light-teal text-white dark:bg-dark-gray">
+            <button className="justify-self-end col-span-1 col-end-3 w-32 py-[9px] cursor-pointer rounded hover:bg-light-teal bg-light-teal text-white dark:bg-dark-gray">
               Gönder
             </button>
           </Form>
         )}
       </Formik>
-    </div>
+    </main>
   );
 };
 
