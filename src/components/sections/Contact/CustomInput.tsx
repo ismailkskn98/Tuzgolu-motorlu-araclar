@@ -14,6 +14,7 @@ type CustomInputProps = {
 
 const CustomInput: FC<CustomInputProps> = (props) => {
   const [field, meta] = useField(props);
+  console.log(meta);
 
   const formIcon = () => {
     switch (props.id) {
