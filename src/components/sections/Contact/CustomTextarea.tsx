@@ -10,10 +10,10 @@ type CustomTextareaProps = {
 };
 
 const CustomTextarea: FC<CustomTextareaProps> = (props) => {
-  const [field, meta] = useField(props);
+  const [field, { error, touched }] = useField(props);
 
-  console.log(field);
-  console.log(meta);
+  // console.log(field);
+  // console.log(meta);
 
   return (
     <>
@@ -22,7 +22,9 @@ const CustomTextarea: FC<CustomTextareaProps> = (props) => {
           {...field}
           {...props}
           required
-          className="px-3 py-4 w-full min-h-40 resize-none outline-none rounded border bg-transparent text-dark-gray dark:text-gray-300 text-xs dark:border-gray-600"
+          className={`px-3 py-4 w-full min-h-40 resize-none outline-none rounded border bg-transparent text-xs text-dark-gray dark:text-gray-300 ${
+            error && touched ? 'border-light-orange' : 'dark:border-gray-600 border-gray-600'
+          }`}
         />
         <label
           className="absolute transition-all top-4 left-4 text-[13px] px-2 tracking-wide bg-white dark:bg-dark-black text-dark-gray dark:text-gray-300"
@@ -30,7 +32,11 @@ const CustomTextarea: FC<CustomTextareaProps> = (props) => {
         >
           {props.label}
         </label>
-        <span className="absolute top-4 right-4 text-[18px] tracking-wide text-dark-gray dark:text-gray-300">
+        <span
+          className={`absolute top-4 right-4 text-[18px] tracking-wide ${
+            error && touched ? 'text-light-orange' : 'text-dark-gray dark:text-gray-300'
+          }`}
+        >
           <RiMessage2Fill />
         </span>
       </div>

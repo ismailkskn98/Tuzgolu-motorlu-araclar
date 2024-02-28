@@ -13,8 +13,7 @@ type CustomInputProps = {
 };
 
 const CustomInput: FC<CustomInputProps> = (props) => {
-  const [field, meta] = useField(props);
-  console.log(meta);
+  const [field, { error, touched }] = useField(props);
 
   const formIcon = () => {
     switch (props.id) {
@@ -34,13 +33,15 @@ const CustomInput: FC<CustomInputProps> = (props) => {
 
   return (
     <>
-      <article className="form-item relative w-full">
+      <article className="form-item relative w-full col-span-2 lg:col-span-1">
         <input
           {...field}
           {...props}
           required
           autoComplete="off"
-          className="px-3 py-4 rounded w-full outline-none border bg-transparent text-dark-gray dark:text-gray-300 text-xs dark:border-gray-600"
+          className={`px-3 py-4 rounded w-full outline-none border bg-transparent text-dark-gray dark:text-gray-300 text-xs ${
+            error && touched ? 'border-light-orange' : 'dark:border-gray-600 border-gray-600'
+          }`}
         />
         <label
           className="absolute top-1/2 px-1 -translate-y-1/2 left-3 text-[13px] tracking-wide transition-all bg-white dark:bg-dark-black text-dark-gray dark:text-gray-300"
@@ -48,9 +49,14 @@ const CustomInput: FC<CustomInputProps> = (props) => {
         >
           {props.label}
         </label>
-        <span className="absolute top-1/2 -translate-y-1/2 right-3 text-[16px] tracking-wide text-dark-gray dark:text-gray-300">
+        <span
+          className={`absolute top-1/2 -translate-y-1/2 right-3 text-[16px] tracking-wide ${
+            error && touched ? 'text-light-orange' : 'text-dark-gray dark:text-gray-300'
+          }`}
+        >
           {formIcon()}
         </span>
+        {error && touched && <div className="text-xs text-light-orange absolute -top-5 right-0">{error}</div>}
       </article>
     </>
   );

@@ -4,7 +4,7 @@ export const useIsScroll = (): boolean => {
   const [isScroll, setIsScroll] = useState<boolean>(false);
 
   const handleScroll = (): void => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 1) {
       setIsScroll(true);
     } else {
       setIsScroll(false);

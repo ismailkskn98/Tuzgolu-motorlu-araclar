@@ -6,6 +6,7 @@ import { IoClose } from 'react-icons/io5';
 import ThemeBtn from '../../../buttons/ThemeBtn';
 import { SlMenu } from 'react-icons/sl';
 import { useActiveNav } from '../../../../hooks/useActiveNav';
+import { useIsScroll } from '../../../../hooks/useIsScroll';
 
 type MobilNavbarProps = {
   navItems: NavItems[];
@@ -34,6 +35,7 @@ const item = {
 const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
   const [isShow, setIsShow] = useState(false);
   const { activeSection, handleNavLinkClick } = useActiveNav();
+  const isScroll = useIsScroll();
 
   const handleNavClick = (sectionId: string): void => {
     setIsShow((prev) => !prev);
@@ -42,7 +44,7 @@ const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
 
   return (
     <nav id="mobilNav" className="lg:hidden">
-      <SlMenu onClick={() => setIsShow((prev) => !prev)} className="text-4xl" />
+      <SlMenu onClick={() => setIsShow((prev) => !prev)} className={`${isScroll ? 'text-3xl' : 'text-4xl'}`} />
       <AnimatePresence>
         {isShow && (
           <motion.div

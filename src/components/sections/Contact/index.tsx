@@ -13,7 +13,7 @@ const Contact: FC = () => {
       <main className="relative wrapper bg-white dark:bg-dark-black p-4 mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between mt-10 overflow-hidden rounded">
         <ContactInfo />
         <ContactForm />
-        <div className="absolute -bottom-8 right-16 bg-contact-bg w-64 h-36 -rotate-[30deg]"></div>
+        <div className="absolute -bottom-20 right-10 lg:-bottom-8 lg:right-16 bg-contact-bg w-64 h-36 -rotate-[30deg]"></div>
       </main>
     </section>
   );
