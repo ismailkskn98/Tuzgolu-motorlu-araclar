@@ -13,5 +13,8 @@ export const contactSchema = Yup.object({
     .matches(/^05\d{9}$/, '*Geçerli bir telefon numarasi giriniz')
     .required('*Telefon alanı zorunludur'),
   email: Yup.string().email('*Geçerli bir email giriniz').required('*Mesaj alanı zorunludur'),
-  message: Yup.string().required('*Mesaj alanı zorunludur'),
+  message: Yup.string()
+    .min(5, '*En az 5 karakter giriniz')
+    .max(300, '*En fazla 300 karakter girebilirsiniz')
+    .required('*Mesaj alanı zorunludur'),
 });

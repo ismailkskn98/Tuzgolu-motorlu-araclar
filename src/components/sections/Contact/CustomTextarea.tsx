@@ -39,6 +39,7 @@ const CustomTextarea: FC<CustomTextareaProps> = (props) => {
         >
           <RiMessage2Fill />
         </span>
+        {error && touched && <div className="text-xs text-light-orange absolute -top-5 right-0">{error}</div>}
       </div>
     </>
   );
