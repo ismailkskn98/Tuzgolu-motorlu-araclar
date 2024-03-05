@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import logo from '../../../../assets/images/logo.png';
 import { IoClose } from 'react-icons/io5';
 import ThemeBtn from '../../../buttons/ThemeBtn';
-import { SlMenu } from 'react-icons/sl';
+import { RiMenu3Line } from 'react-icons/ri';
 import { useActiveNav } from '../../../../hooks/useActiveNav';
 import { useIsScroll } from '../../../../hooks/useIsScroll';
 
@@ -44,7 +44,7 @@ const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
 
   return (
     <nav id="mobilNav" className="lg:hidden">
-      <SlMenu onClick={() => setIsShow((prev) => !prev)} className={`${isScroll ? 'text-3xl' : 'text-4xl'}`} />
+      <RiMenu3Line onClick={() => setIsShow((prev) => !prev)} className={`${isScroll ? 'text-3xl' : 'text-4xl'}`} />
       <AnimatePresence>
         {isShow && (
           <motion.div

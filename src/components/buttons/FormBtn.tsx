@@ -10,7 +10,7 @@ const FormBtn: FC<FormBtnProps> = ({ isValid, isSubmitting }) => {
   return (
     <button
       type="submit"
-      className="relative z-10 justify-self-end col-span-1 col-end-3 px-10 py-[9px] cursor-pointer rounded hover:bg-light-teal bg-light-teal text-white dark:bg-dark-gray"
+      className="relative z-10 justify-self-end col-span-1 col-end-3 px-10 py-[9px] cursor-pointer rounded hover:bg-contact-hover bg-light-teal text-white dark:bg-dark-gray"
       disabled={!isValid || isSubmitting}
     >
       {isSubmitting ? (

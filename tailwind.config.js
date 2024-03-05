@@ -23,6 +23,7 @@ export default {
           teal: '#497174',
           orange: '#FD7014',
         },
+        'contact-hover': '#273F41',
       },
     },
   },
