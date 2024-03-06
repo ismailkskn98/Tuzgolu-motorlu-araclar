@@ -24,8 +24,8 @@ const Header: FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full py-3 z-50 bg-light-teal lg:bg-[#0c0c0c1c] dark:bg-dark-black lg:dark:bg-transparent ${
-        isScroll && 'lg:backdrop-blur-[50px] lg:bg-light-teal/70 lg:dark:bg-dark-black/70'
+      className={`fixed top-0 left-0 w-full py-3 z-50 bg-light-teal dark:bg-dark-black lg:dark:bg-transparent ${
+        isScroll ? 'lg:bg-[#0c0c0c1c] lg:backdrop-blur-[50px] lg:dark:bg-dark-black/70' : 'lg:bg-transparent'
       }`}
     >
       <div className="wrapper flex justify-between items-center text-light-white dark:text-dark-white">
