@@ -24,7 +24,7 @@ const Header: FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full py-3 z-50 bg-light-teal dark:bg-dark-black lg:bg-transparent lg:dark:bg-transparent ${
+      className={`fixed top-0 left-0 w-full py-3 z-50 bg-light-teal lg:bg-[#0c0c0c1c] dark:bg-dark-black lg:dark:bg-transparent ${
         isScroll && 'lg:backdrop-blur-[50px] lg:bg-light-teal/70 lg:dark:bg-dark-black/70'
       }`}
     >

@@ -8,6 +8,8 @@ export default {
         'landing-light-bg': 'url(/src/assets/images/landing/landingBackground.svg)',
         'landing-dark-bg': 'url(/src/assets/images/landing/landingBackgroundDark.svg)',
         'contact-bg': 'url(/src/assets/images/contact/contact.svg)',
+        'footer-light-bg': 'url(/src/assets/images/footer/footer.svg)',
+        'footer-dark-bg': 'url(/src/assets/images/footer/footerDark.svg)',
       },
       colors: {
         dark: {
@@ -24,6 +26,7 @@ export default {
           orange: '#FD7014',
         },
         'contact-hover': '#273F41',
+        'light-border-color': 'rgb(150 150 150 / 47%)',
       },
     },
   },

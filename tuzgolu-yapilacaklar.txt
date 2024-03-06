@@ -1,19 +1,10 @@
-1-) LandingSlogan'a bi göz at kasmayı düzeltebilirsen düzelt
-
-2-) MobilNav iconunu değiştir
-
-3-) contact bölümüne harita ekle
-
-4-) contact bölümüne hover efekti ekle ++
-
 5-) hakkımda bölümünü yap
 
 6-) yedek-parçalar bölümünü yap
 
 7-) galeri bölümünü yap
 
-8-) footer bölümünü yap
-
 9-) Whatsapp iconunu ayarla
 
 10-) kasma vs. kontrollerini yap yayınla
+
